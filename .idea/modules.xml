@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JetbrainsAcademy_KotlinBasics_IndigoCardGame.iml" filepath="$PROJECT_DIR$/.idea/modules/JetbrainsAcademy_KotlinBasics_IndigoCardGame.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Indigo Card Game/task/JetbrainsAcademy_KotlinBasics_IndigoCardGame.Indigo_Card_Game-task.iml" filepath="$PROJECT_DIR$/.idea/modules/Indigo Card Game/task/JetbrainsAcademy_KotlinBasics_IndigoCardGame.Indigo_Card_Game-task.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Indigo Card Game/task/JetbrainsAcademy_KotlinBasics_IndigoCardGame.Indigo_Card_Game-task.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Indigo Card Game/task/JetbrainsAcademy_KotlinBasics_IndigoCardGame.Indigo_Card_Game-task.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Indigo Card Game/task/JetbrainsAcademy_KotlinBasics_IndigoCardGame.Indigo_Card_Game-task.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Indigo Card Game/task/JetbrainsAcademy_KotlinBasics_IndigoCardGame.Indigo_Card_Game-task.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/JetbrainsAcademy_KotlinBasics_IndigoCardGame.util.iml" filepath="$PROJECT_DIR$/.idea/modules/util/JetbrainsAcademy_KotlinBasics_IndigoCardGame.util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/JetbrainsAcademy_KotlinBasics_IndigoCardGame.util.main.iml" filepath="$PROJECT_DIR$/.idea/modules/util/JetbrainsAcademy_KotlinBasics_IndigoCardGame.util.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/JetbrainsAcademy_KotlinBasics_IndigoCardGame.util.test.iml" filepath="$PROJECT_DIR$/.idea/modules/util/JetbrainsAcademy_KotlinBasics_IndigoCardGame.util.test.iml" />
+    </modules>
+  </component>
+</project>
