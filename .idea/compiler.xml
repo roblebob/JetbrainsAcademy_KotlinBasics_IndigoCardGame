@@ -2,7 +2,19 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel target="17">
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Indigo_Card_Game-task-build-classes-kotlin.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Indigo_Card_Game-task-build-reports-tests.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Indigo_Card_Game-task-build-test-results.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Indigo_Card_Game-task-build-tmp.main" target="8" />
       <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Indigo_Card_Game-task.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Enum-Currency_comparison.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Enum-Properties_of_Enum.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Enum-The_rainbow_order.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Enum-Theory.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Member_functions-Application_as_a_class.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Member_functions-Arithmetic_operations.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Member_functions-Operations.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Member_functions-Theory.main" target="8" />
       <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.util.main" target="8" />
     </bytecodeTargetLevel>
   </component>
