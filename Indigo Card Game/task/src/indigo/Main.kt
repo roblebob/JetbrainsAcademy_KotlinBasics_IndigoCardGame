@@ -16,7 +16,7 @@ class VirtualCardDeck(var deck: MutableSet<String> = mutableSetOf() ) {
     fun reset() = default().also { deck = it }
 
 
-    fun print() = println(deck)
+    //fun print() = println(deck)
 
     private fun default() = cartesianProduct(SUITS.slice(listOf(2, 1, 0, 3)), RANKS).map { it.second + it.first }.toMutableSet()
 }
@@ -41,7 +41,7 @@ fun main() {
             "get" -> {
                 println("Number of cards:")
                 val s = readln()
-                if (!s.contains("[1-9][0..9]*".toRegex())  ||  s.toInt() > 52) {
+                if (!s.contains("[1-9][0-9]*".toRegex())  ||  s.toInt() > 52) {
                     println("Invalid number of cards.")
                     continue
                 }
