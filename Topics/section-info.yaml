@@ -1,3 +1,18 @@
 content:
 - Member functions
 - Enum
+- Relational operators
+- Getting substrings
+- Processing strings
+- Null safety
+- Type system
+- Secondary constructor
+- Call stack
+- When expression
+- Scopes
+- Inheritance
+- Overriding functions
+- Nullable and non-nullable types
+- toString()
+- Data class
+- Property accessors

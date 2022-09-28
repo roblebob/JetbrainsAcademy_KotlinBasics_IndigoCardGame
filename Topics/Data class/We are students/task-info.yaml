@@ -1,0 +1,12 @@
+type: code
+files:
+- name: src/Main.kt
+  visible: true
+  text: // write your data class here
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/20482#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Tue, 27 Sep 2022 15:47:04 UTC
+record: -1

@@ -7,14 +7,101 @@
       <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Indigo_Card_Game-task-build-test-results.main" target="8" />
       <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Indigo_Card_Game-task-build-tmp.main" target="8" />
       <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Indigo_Card_Game-task.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Call_stack-About_call_stack.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Call_stack-Adding_a_new_stack_frame.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Call_stack-Follow_the_call_stack.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Call_stack-Theory.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Call_stack-What_does_a_stack_frame_hold.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Data_class-Allowance_for_constructors.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Data_class-Allowance_for_functions.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Data_class-copy___usage.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Data_class-equals___check.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Data_class-Generated_functions.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Data_class-Illegal_to_override.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Data_class-Room_mystery.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Data_class-Theory.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Data_class-toString___modification.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Data_class-We_are_students.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Enum-Currencies.main" target="8" />
       <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Enum-Currency_comparison.main" target="8" />
       <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Enum-Properties_of_Enum.main" target="8" />
       <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Enum-The_rainbow_order.main" target="8" />
       <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Enum-Theory.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Getting_substrings-Case_insensitive.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Getting_substrings-From_A_to_B.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Getting_substrings-The_last_of_u.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Getting_substrings-Theory.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Getting_substrings-Void.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Inheritance-Comprehension_of_inheritance.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Inheritance-Constructing_a_hierarchy.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Inheritance-Default_modifiers.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Inheritance-Fix_bugs.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Inheritance-Statements_about_inheritance.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Inheritance-Theory.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Inheritance-Woof.main" target="8" />
       <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Member_functions-Application_as_a_class.main" target="8" />
       <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Member_functions-Arithmetic_operations.main" target="8" />
       <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Member_functions-Operations.main" target="8" />
       <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Member_functions-Theory.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Null_safety-Check_length.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Null_safety-Theory.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Nullable_and_non-nullable_types-Declare_null.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Nullable_and_non-nullable_types-Line_length.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Nullable_and_non-nullable_types-Mixed_nullable.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Nullable_and_non-nullable_types-Nullable_variables.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Nullable_and_non-nullable_types-String_nullable.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Nullable_and_non-nullable_types-Theory.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Nullable_and_non-nullable_types-What's_your_name.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Overriding_functions-Fix_bugs.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Overriding_functions-Theory.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Processing_strings-Determine_the_output.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Processing_strings-Determine_the_value.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Processing_strings-Determine_the_value__1_.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Processing_strings-Find_the_first_occurrence_of_the_word__the.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Processing_strings-Palindrome.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Processing_strings-Theory.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Property_accessors-City_population.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Property_accessors-Facts_about_getters.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Property_accessors-Facts_about_setters.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Property_accessors-Field_access.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Property_accessors-Implement_a_class.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Property_accessors-Mutable_state.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Property_accessors-Property_syntax.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Property_accessors-Theory.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Property_accessors-Weather_comparison.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Relational_operators-Are_the_numbers_different.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Relational_operators-Theory.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Scopes-Code_review.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Scopes-Power_and_scopes.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Scopes-Theory.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Scopes-Unlucky_one.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Scopes-What_is_the_scope.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Secondary_constructor-Barista_problem.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Secondary_constructor-Creating_news.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Secondary_constructor-Fabric_manufacture.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Secondary_constructor-Theory.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Secondary_constructor-Validation.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-toString__-Tea.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-toString__-Theory.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-toString__-toString___types.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Type_system-Bottom_of_the_hierarchy.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Type_system-Can_it_go_through.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Type_system-Hello.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Type_system-Oops,_something_went_wrong.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Type_system-Reverse_me_if_you_can.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Type_system-String_length.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Type_system-String_or_Int.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Type_system-Super_super_type.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Type_system-Supertype.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Type_system-Theory.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-When_expression-Direction.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-When_expression-From_string_to_a_number.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-When_expression-Harry_Potter.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-When_expression-Select_correct_branches.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-When_expression-Shape.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-When_expression-String_processor.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-When_expression-Strings_as_objects.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-When_expression-Theory.main" target="8" />
       <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.util.main" target="8" />
     </bytecodeTargetLevel>
   </component>
