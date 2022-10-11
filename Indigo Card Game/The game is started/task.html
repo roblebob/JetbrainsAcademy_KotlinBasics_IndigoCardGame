@@ -1,44 +1,24 @@
-<h5 id="description">Description</h5>
-
+<html><body><h5 id="description">Description</h5>
 <p>We have a virtual card deck, and now, it is time to build the game's basic core and loop.</p>
-
 <p>In the beginning, there're four cards on the table. The players get six cards and take turns in throwing one card at a time. One of the players is the computer. When they both have no cards in hand, deal another six cards to the players. This continues until there are no more cards in the deck. If you do the calculations, they will give you four deals (4 cards + 4 deals * 2 * 6 cards = 52 cards).</p>
-
 <p>In the current stage, just pile up the cards on the table. We will implement a win condition in the next stage.</p>
-
 <p>For each turn, print the information of the number of cards on the table and the top card. When it is the computer's turn, always put the first card in hand. The computer AI will get better in the final stage.</p>
-
 <p>Users should have the option to exit the program at any time.</p>
-
 <h5 id="objectives">Objectives</h5>
-
 <p>Print the project title: <code class="java">Indigo Card Game</code>.</p>
-
 <p>Ask whether users want to play first by prompting the <code class="java">Play first?</code> statement. The only available input options should be <code class="java">yes</code> or <code class="java">no</code> (case insensitive). For any other input, print the question again (Example 3). If <code class="java">yes</code>, then the player plays first (Example 1), and if <code class="java">no</code>, then the computer plays first (Example 2).</p>
-
 <p>Print the first 4 cards from the deck with the message: <code class="java">Initial cards on the table: J♣ Q♣ 9♦ 5♦</code> (the cards here are random). Divide the cards with a single space. The last card on the right is the top card on the table.</p>
-
 <p>After that, the player and computer take turns in putting cards on the table. If it is the player's turn, print the message <code class="java">4 cards on the table, and the top card is 5♦</code>, where the first number is the number of cards on the table, and the card is the top card. Then print the cards in the player's hand with a prompt to choose one of them, as follows:</p>
-
 <pre><code class="language-no-highlight">Cards in hand: 1)9♥ 2)4♠ 3)A♣ 4)9♣ 5)4♥ 6)3♥
 Choose a card to play (1-6):</code></pre>
-
 <p>Divide the cards with a single space. The player should enter a number within the range of <code class="java">1</code> to <code class="java">&lt;Number of cards in hand&gt;</code>. If the input contains something else, prompt <code class="java">Choose a card to play (1-6):</code> once again (Example 4).</p>
-
 <p>If it is the computer's turn, print the message <code class="java">5 cards on the table, and the top card is X</code> (a random card), where the first number is the number of cards on the table, and the card is the top card. Then, the computer should play the first card in hand. Print the message <code class="java">Computer plays X</code> (a random card).</p>
-
 <p>Once there're no more cards to play, print the message <code class="java">52 cards on the table, and the top card is X</code> (a random card), followed by the message <code class="java">Game Over</code>. Terminate the program.</p>
-
 <p>If the player inputs <code class="java">exit</code>, when prompted for a card, print the message <code class="java">Game Over</code> and terminate the program (Examples 3 and 4).</p>
-
 <h5 id="examples">Examples</h5>
-
 <p>The greater-than symbol followed by a space (<code class="java">&gt; </code>) represents the user input. Note that it's not part of the input.</p>
-
 <p>Example 2 has been shortened.</p>
-
 <p><strong>Example 1:</strong> <em>standard execution; player first</em></p>
-
 <pre><code class="language-no-highlight">Indigo Card Game
 Play first?
 &gt; yes
@@ -238,9 +218,7 @@ Computer plays 2♦
 
 52 cards on the table, and the top card is 2♦
 Game Over</code></pre>
-
 <p><strong>Example 2:</strong> <em>standard execution; computer first</em></p>
-
 <pre><code class="language-no-highlight">Indigo Card Game
 Play first?
 &gt; no
@@ -286,9 +264,7 @@ Choose a card to play (1-1):
 
 52 cards on the table, and the top card is 5♦
 Game Over</code></pre>
-
 <p><strong>Example 3:</strong> <em>play first? wrong input; exit</em></p>
-
 <pre><code class="language-no-highlight">Indigo Card Game
 Play first?
 &gt; OK
@@ -307,9 +283,7 @@ Cards in hand: 1)6♥ 2)9♥ 3)8♣ 4)6♦ 5)Q♦ 6)3♦
 Choose a card to play (1-6):
 &gt; exit
 Game Over</code></pre>
-
 <p><strong>Example 4:</strong> <em>wrong card to play; exit</em></p>
-
 <pre><code class="language-no-highlight">Indigo Card Game
 Play first?
 &gt; yes
@@ -333,4 +307,4 @@ Computer plays K♠
 Cards in hand: 1)Q♦ 2)6♥ 3)4♥ 4)4♠ 5)3♦
 Choose a card to play (1-5):
 &gt; exit
-Game Over</code></pre>
+Game Over</code></pre></body></html>

@@ -50,8 +50,10 @@
             <option value="$PROJECT_DIR$/Topics/Inheritance/Woof" />
             <option value="$PROJECT_DIR$/Topics/Member functions/Application as a class" />
             <option value="$PROJECT_DIR$/Topics/Member functions/Arithmetic operations" />
+            <option value="$PROJECT_DIR$/Topics/Member functions/Facts about member functions" />
             <option value="$PROJECT_DIR$/Topics/Member functions/Operations" />
             <option value="$PROJECT_DIR$/Topics/Member functions/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Member functions/Volume of a cube" />
             <option value="$PROJECT_DIR$/Topics/Null safety/Check length" />
             <option value="$PROJECT_DIR$/Topics/Null safety/Theory" />
             <option value="$PROJECT_DIR$/Topics/Nullable and non-nullable types/Declare null" />
@@ -67,6 +69,7 @@
             <option value="$PROJECT_DIR$/Topics/Processing strings/Determine the value" />
             <option value="$PROJECT_DIR$/Topics/Processing strings/Determine the value (1)" />
             <option value="$PROJECT_DIR$/Topics/Processing strings/Find the first occurrence of the word  the" />
+            <option value="$PROJECT_DIR$/Topics/Processing strings/Move the first N characters" />
             <option value="$PROJECT_DIR$/Topics/Processing strings/Palindrome" />
             <option value="$PROJECT_DIR$/Topics/Processing strings/Theory" />
             <option value="$PROJECT_DIR$/Topics/Property accessors/City population" />

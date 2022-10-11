@@ -1,10 +1,10 @@
 type: choice
 is_multiple_choice: true
 options:
-- text: Setters don't return any values
-- text: There is only one set() method for one value
-- text: Setters can be customized
 - text: You can use a setter for val variables
+- text: Setters don't return any values
+- text: Setters can be customized
+- text: There can be only one set() method for one property
 files:
 - name: src/Main.kt
   visible: true

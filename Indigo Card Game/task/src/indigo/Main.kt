@@ -4,143 +4,178 @@ val RANKS = listOf("A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", 
 val SUITS = listOf("♦", "♥", "♠", "♣")
 val DEFAULT = cartesianProduct(SUITS.slice(listOf(2, 1, 0, 3)), RANKS).map { it.second + it.first }.toMutableSet()
 
-class VirtualCardDeck(var deck: MutableSet<String> = DEFAULT ) {
+class VirtualCardDeck(var cards: MutableSet<String> = DEFAULT ) {
+
+    val size: Int
+        get() = cards.size
 
     init {
-        // shuffle()
+        shuffle()
     }
 
-    fun get(i: Int): MutableSet<String> = deck.toMutableList().slice(0 until i).toMutableSet().also { deck.removeAll(it) }
+    fun get(i: Int): MutableSet<String> = cards.toMutableList().slice(0 until i).toMutableSet().also { cards.removeAll(it) }
 
-    fun shuffle() = deck.shuffled().toMutableSet().also{ deck = it }
-
-    fun reset() = DEFAULT.also { deck = it }
+    fun shuffle() = cards.shuffled().toMutableSet().also{ cards = it }
 }
 
+class History(val firstPlayed: String) {
+    var lastWon = firstPlayed
+    val playersWins = mutableSetOf<String>()
+    val computersWins = mutableSetOf<String>()
 
+    val allCardsHaveBeenPlayed: Boolean
+        get() = playersWins.size + computersWins.size == 52
 
-data class Cards(val my: MutableSet<String>, val computer: MutableSet<String>, val table: MutableSet<String>)
+    val summery: String
+        get() {
+            return "Score: Player $playersScore - Computer $computersScore" + "\n" +
+                    "Cards: Player ${playersWins.size} - Computer ${computersWins.size}"
+        }
 
+    private val playersScore: Int
+        get() {
+            return score(playersWins) +
+                    if (allCardsHaveBeenPlayed && (playersWins.size > computersWins.size ||
+                                (playersWins.size == computersWins.size && firstPlayed == "player"))) { 3 } else { 0 }
+        }
+
+    private val computersScore: Int
+        get() {
+            return score(computersWins) +
+                    if (allCardsHaveBeenPlayed && (playersWins.size < computersWins.size ||
+                                (playersWins.size == computersWins.size && firstPlayed == "computer"))) { 3 } else { 0 }
+        }
+
+    private fun score(set: MutableSet<String>): Int {
+        return set
+            .map { if (it.substring(0..it.length - 2) in mutableSetOf("A", "10", "J", "Q", "K")) 1 else 0 }
+            .sum()
+    }
+}
 
 
 fun main() {
     println("Indigo Card Game")
 
-    val deck = VirtualCardDeck()
-
-    val cards = Cards(my = deck.get(6), computer = deck.get(6), table = deck.get(4))
-
-
-    // determine who starts
-    var isMyTurn = false
+    // decide who starts
+    var isPlayersTurn: Boolean
     while (true) {
         println("Play first?")
-        val s = readln().lowercase()
-        isMyTurn = if (s == "yes") {
-            true
-        } else if (s == "no") {
-            false
-        } else {
-            continue
+        isPlayersTurn = when (readln().lowercase()) {
+            "yes" -> true
+            "no" -> false
+            else -> continue
         }
         break
     }
 
+    // initializing core units
+    val history = History(firstPlayed = if (isPlayersTurn) "player" else "computer")
+    val deck = VirtualCardDeck()
+    val table = mutableSetOf<String>()
+    val player = mutableSetOf<String>()
+    val computer = mutableSetOf<String>()
 
-    println("Initial cards on the table: ${cards.table.joinToString(" ")}")
+    // preparing table
+    table.addAll(deck.get(4))
+    println("Initial cards on the table: ${table.joinToString(" ")}")
 
     // actual game
     loop@while (true) {
-        println("\n${cards.table.size} cards on the table, and the top card is ${cards.table.last()}")
-        if (cards.table.size >= 52) {
-            break
-        }
-        if (cards.my.size == 0 && cards.computer.size == 0) {
-            cards.my.addAll(deck.get(6))
-            cards.computer.addAll(deck.get(6))
+
+        println(
+            "\n" +
+            if (table.isNotEmpty()) {
+                "${table.size} cards on the table, and the top card is ${table.last()}"
+            } else {
+                "No cards on the table"
+            }
+        )
+
+        // handing the players new cards from the deck if theirs are empty
+        if (player.size == 0 && computer.size == 0) {
+            if (deck.size >= 12) {
+                player.addAll(deck.get(6))
+                computer.addAll(deck.get(6))
+            } else {
+                if (history.lastWon == "player") {
+                    history.playersWins.addAll(table)
+                } else {
+                    history.computersWins.addAll(table)
+                }
+                println(history.summery)
+                break@loop
+            }
         }
 
-        if (isMyTurn) {
-            // println(cards.my.joinToString(" "))
-            print("Cards in hand:")
-            for (i in cards.my.toMutableList().indices) {
-                print(" ${i+1})${cards.my.toMutableList()[i]}" )
-            }
-            print("\n")
+
+        if (isPlayersTurn) {
+
+            println("Cards in hand: ${player.mapIndexed { idx, el -> "${idx + 1})$el" }.joinToString(" ")}")
+
             while (true) {
-                println("\nChoose a card to play (1-${cards.my.size}):")
+                println("Choose a card to play (1-${player.size}):")
                 val s = readln()
                 if (s == "exit") {
                     break@loop
-                } else if (!s.contains("[1-9][0-9]*".toRegex()) || s.toInt() !in 1..cards.my.size) {
+                } else if (!s.contains("[1-9][0-9]*".toRegex()) || s.toInt() !in 1..player.size) {
                     continue
                 }
 
-                val i = s.toInt() - 1
-                val el = cards.my.toMutableList()[i]
-                cards.table += el
-                cards.my.remove(el)
+                toss(from = player, to = table, idx = s.toInt() - 1)
                 break
             }
         } else {
-            val i = 0
-            val el = cards.computer.toMutableList()[i]
-            cards.table += el
-            cards.computer.remove(el)
-            println("Computer plays $el")
+            println("Computer plays ${toss(from = computer, to = table)}")
         }
 
-        isMyTurn = !isMyTurn
+
+        // checking if that on the table is a win
+        if (table.size > 1) {
+            if (isAWin(table.last(), table.elementAt(table.size - 2))) {
+                if (isPlayersTurn) {
+                    history.playersWins.addAll(table)
+                    println("Player wins cards")
+                    history.lastWon = "player"
+                } else {
+                    history.computersWins.addAll(table)
+                    println("Computer wins cards")
+                    history.lastWon = "computer"
+                }
+                table.clear()
+                println(history.summery)
+            }
+        }
+
+        // break if its over
+        if (table.size >= 52 || history.allCardsHaveBeenPlayed) {
+            break@loop
+        }
+
+        // prepare next round
+        isPlayersTurn = !isPlayersTurn
     }
     println("Game Over")
-
-//    while (true) {
-//        println("Choose an action (reset, shuffle, get, exit):")
-//        when (readln()) {
-//            "reset" -> {
-//                deck.reset()
-//                println("Card deck is reset.")
-//            }
-//            "shuffle" -> {
-//                deck.shuffle()
-//                println("Card deck is shuffled.")
-//            }
-//            "get" -> {
-//                println("Number of cards:")
-//                val s = readln()
-//                if (!s.contains("[1-9][0-9]*".toRegex())  ||  s.toInt() > 52) {
-//                    println("Invalid number of cards.")
-//                    continue
-//                }
-//
-//                val i = s.toInt()
-//
-//                if (i > deck.deck.size) {
-//                    println("The remaining cards are insufficient to meet the request.")
-//                    continue
-//                }
-//
-//                val hand = deck.get(i)
-//
-//                println(hand.joinToString(" "))
-//            }
-//            "exit" -> {
-//                println("Bye")
-//                return
-//            }
-//            else -> {
-//                println("Wrong action.")
-//                continue
-//            }
-//        }
-//    }
 }
 
 
+/**
+ * determines if two given cards represent a win, namely if the ranks or the suits are the same
+ */
+fun isAWin(card1: String, card2: String): Boolean =
+    card1.last() == card2.last() /* suits */ ||
+        card1.substring(0..card1.length - 2) == card2.substring(0..card1.length - 2)  /* ranks */
+
+/**
+ * produces a cartesian product with the elements being paired
+ * (source: https://gist.github.com/kiwiandroiddev/fef957a69f91fa64a46790977d98862b)
+ */
+fun <T, U> cartesianProduct(c1: Collection<T>, c2: Collection<U>): List<Pair<T, U>> =
+    c1.flatMap { lhsElem -> c2.map { rhsElem -> lhsElem to rhsElem } }
 
 
-
-// https://gist.github.com/kiwiandroiddev/fef957a69f91fa64a46790977d98862b
-fun <T, U> cartesianProduct(c1: Collection<T>, c2: Collection<U>): List<Pair<T, U>> {
-    return c1.flatMap { lhsElem -> c2.map { rhsElem -> lhsElem to rhsElem } }
-}
+/**
+ * tosses a single element, from collection 'from' to collection 'to' and returns that element for noticing
+ */
+fun <T> toss(from: MutableCollection<T>, to: MutableCollection<T>, idx: Int = 0) : T =
+    from.elementAtOrElse(idx) { from.random() }.also { from -= it; to += it }

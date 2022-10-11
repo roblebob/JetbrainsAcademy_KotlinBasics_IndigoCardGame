@@ -655,7 +655,8 @@ files:
 
         position = checkOutput(output.lowercase(), position, "Cards in hand:".lowercase())
         if ( position  == -1 ) return ErrorData(false, "Wrong cards in hand message.")
-        var cardsInHand = output.substring(position).lines().map { it.trim() }.first { it != "" }
+        val cardsInHand = output.substring(position).lines().map { it.trim() }.firstOrNull() { it != "" }
+            ?: return ErrorData(false, "Wrong cards in hand message.")
         if (!checkOIfValidCardsInHand(cardsInHand, numOfCards)) return ErrorData(false, "Wrong cards in hand message.")
         val listCardsInHand = cardsInHand.split(" ").map { it.substring(2) }
         var strCardsInHand = ""
@@ -700,5 +701,8 @@ files:
     }
   learner_created: false
 feedback_link: https://hyperskill.org/learn/step/16511#comment
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Tue, 11 Oct 2022 16:46:23 UTC
 record: 4

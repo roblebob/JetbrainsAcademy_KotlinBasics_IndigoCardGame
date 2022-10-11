@@ -453,7 +453,8 @@ files:
 
         position = checkOutput(output.lowercase(), position, "Cards in hand:".lowercase())
         if ( position  == -1 ) return ErrorData(false, "Wrong cards in hand message.")
-        var cardsInHand = output.substring(position).lines().map { it.trim() }.first { it != "" }
+        val cardsInHand = output.substring(position).lines().map { it.trim() }.firstOrNull() { it != "" }
+            ?: return ErrorData(false, "Wrong cards in hand message.")
         if (!checkOIfValidCardsInHand(cardsInHand, numOfCards)) return ErrorData(false, "Wrong cards in hand message.")
         val listCardsInHand = cardsInHand.split(" ").map { it.substring(2) }
         var strCardsInHand = ""
@@ -472,7 +473,8 @@ files:
         else checkOutput(output.lowercase(), 0, "$numOfCardsOnTable cards on the table, and the top card is $topCard".lowercase())
         if ( position  == -1 ) return ErrorData(false, "Computer turn: Wrong output for number of cards or the top card.")
 
-        val cardsStr = output.substring(position).lines().map { it.trim() }.first { it != "" }
+        val cardsStr = output.substring(position).lines().map { it.trim() }.firstOrNull() { it != "" }
+            ?: return ErrorData(false, "The computer's cards in hand are not printed.")
         if (cardsStr.isEmpty()) return ErrorData(false, "The computer's cards in hand are not printed.")
         if ( !checkOIfValidCards2(cardsStr, numOfCards) ) return ErrorData(false, "Invalid computer's cards in hand.")
         if ( !checkIfUniqueCards(cardsStr) ) return ErrorData(false, "Computer's cards in hand contain duplicates.")
@@ -618,4 +620,4 @@ files:
   learner_created: false
 feedback_link: https://hyperskill.org/learn/step/16512#comment
 status: Unchecked
-record: -1
+record: 5

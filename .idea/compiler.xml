@@ -41,8 +41,10 @@
       <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Inheritance-Woof.main" target="8" />
       <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Member_functions-Application_as_a_class.main" target="8" />
       <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Member_functions-Arithmetic_operations.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Member_functions-Facts_about_member_functions.main" target="8" />
       <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Member_functions-Operations.main" target="8" />
       <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Member_functions-Theory.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Member_functions-Volume_of_a_cube.main" target="8" />
       <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Null_safety-Check_length.main" target="8" />
       <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Null_safety-Theory.main" target="8" />
       <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Nullable_and_non-nullable_types-Declare_null.main" target="8" />
@@ -58,6 +60,7 @@
       <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Processing_strings-Determine_the_value.main" target="8" />
       <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Processing_strings-Determine_the_value__1_.main" target="8" />
       <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Processing_strings-Find_the_first_occurrence_of_the_word__the.main" target="8" />
+      <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Processing_strings-Move_the_first_N_characters.main" target="8" />
       <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Processing_strings-Palindrome.main" target="8" />
       <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Processing_strings-Theory.main" target="8" />
       <module name="JetbrainsAcademy_KotlinBasics_IndigoCardGame.Topics-Property_accessors-City_population.main" target="8" />
