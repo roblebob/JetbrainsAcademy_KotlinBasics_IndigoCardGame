@@ -3,7 +3,7 @@ hyperskill_project:
   ide_files: https://stepik.org/media/attachments/lesson/607993/additional_files.json
   is_template_based: false
   use_ide: true
-update_date: Tue, 11 Oct 2022 11:30:22 UTC
+update_date: Wed, 19 Oct 2022 06:28:28 UTC
 stages:
 - id: 1072
   step: 16508
@@ -19,7 +19,7 @@ stages:
   is_completed: true
 - id: 1076
   step: 16512
-  is_completed: false
+  is_completed: true
 topics:
   0:
   - title: Binary numbers
@@ -74,10 +74,10 @@ topics:
     theory_id: 4488
   - title: Relational operators
     theory_id: 4525
-  - title: If expression
-    theory_id: 4625
   - title: Declaring functions
     theory_id: 4580
+  - title: If expression
+    theory_id: 4625
   - title: Repeating blocks
     theory_id: 4643
   - title: Objects
@@ -136,12 +136,12 @@ topics:
     theory_id: 20084
   - title: Data structures
     theory_id: 16927
-  - title: While loops
-    theory_id: 4659
   - title: Nullable and non-nullable types
     theory_id: 7613
   - title: Type system
     theory_id: 9689
+  - title: While loops
+    theory_id: 4659
   - title: Secondary constructor
     theory_id: 10746
   - title: Pseudocode

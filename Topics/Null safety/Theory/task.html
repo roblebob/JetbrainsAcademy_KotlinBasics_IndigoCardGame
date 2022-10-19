@@ -24,7 +24,7 @@
 <pre><code class="language-kotlin">var name: String? = "Kotlin"
 val length: Int? = name?.length
 print(if (length != null) length else 0)</code></pre>
-<p>Now we have our own <code class="language-kotlin">length</code> variable. As you see, it will be <code class="language-kotlin">null</code> in case of <code class="language-kotlin">null</code> in the <code class="language-kotlin">name</code> variable. However, we can simplify the code with the<strong> Elvis operator</strong>:</p>
+<p>Now we have our own <code class="language-kotlin">length</code> variable. As you see, it will be <code class="language-kotlin">0</code> in the case of <code class="language-kotlin">null</code> in the <code class="language-kotlin">name</code> variable. However, we can simplify the code with the<strong> Elvis operator</strong>:</p>
 <pre><code class="language-kotlin">var name: String? = "Kotlin"
 val length: Int? = name?.length
 print(length ?: 0)</code></pre>

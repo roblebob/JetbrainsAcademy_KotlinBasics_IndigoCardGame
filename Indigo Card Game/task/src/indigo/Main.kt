@@ -15,7 +15,7 @@ class VirtualCardDeck(var cards: MutableSet<String> = DEFAULT ) {
 
     fun get(i: Int): MutableSet<String> = cards.toMutableList().slice(0 until i).toMutableSet().also { cards.removeAll(it) }
 
-    fun shuffle() = cards.shuffled().toMutableSet().also{ cards = it }
+    private fun shuffle() = cards.shuffled().toMutableSet().also{ cards = it }
 }
 
 class History(val firstPlayed: String) {
@@ -108,7 +108,7 @@ fun main() {
             }
         }
 
-
+        //
         if (isPlayersTurn) {
 
             println("Cards in hand: ${player.mapIndexed { idx, el -> "${idx + 1})$el" }.joinToString(" ")}")
@@ -125,38 +125,118 @@ fun main() {
                 toss(from = player, to = table, idx = s.toInt() - 1)
                 break
             }
-        } else {
-            println("Computer plays ${toss(from = computer, to = table)}")
+        } else /* computers turn */ {
+
+            println(computer.joinToString(" "))
+            val candidates = getCandidates(computer = computer, table = table)
+            val chosen = if (candidates.isNotEmpty()) { candidates.random() } else { computer.random() }
+            println("Computer plays ${toss(from = computer, to = table, idx = computer.indexOf(chosen))}")
         }
 
 
         // checking if that on the table is a win
-        if (table.size > 1) {
-            if (isAWin(table.last(), table.elementAt(table.size - 2))) {
-                if (isPlayersTurn) {
-                    history.playersWins.addAll(table)
-                    println("Player wins cards")
-                    history.lastWon = "player"
-                } else {
-                    history.computersWins.addAll(table)
-                    println("Computer wins cards")
-                    history.lastWon = "computer"
-                }
-                table.clear()
-                println(history.summery)
+        if (table.size > 1 && isAWin(table.last(), table.elementAt(table.size - 2))) {
+            if (isPlayersTurn) {
+                history.playersWins.addAll(table)
+                println("Player wins cards")
+                history.lastWon = "player"
+            } else {
+                history.computersWins.addAll(table)
+                println("Computer wins cards")
+                history.lastWon = "computer"
             }
+            table.clear()
+            println(history.summery)
         }
 
-        // break if its over
+        // break if it's over
         if (table.size >= 52 || history.allCardsHaveBeenPlayed) {
             break@loop
         }
 
-        // prepare next round
+        // prepare for next round
         isPlayersTurn = !isPlayersTurn
     }
     println("Game Over")
 }
+
+
+
+
+
+fun getCandidates(computer: MutableSet<String>, table: MutableSet<String>): MutableSet<String> {
+
+    val candidates = mutableSetOf<String>()
+
+    if (table.isNotEmpty()) {
+        candidates.addAll(computer.filter { isAWin(it, table.last()) }.toMutableSet())
+    }
+
+    if (candidates.size >= 2) {
+        val temp = mutableSetOf<String>()
+        temp.addAll(candidates)
+        candidates.clear()
+        candidates.addAll(cardsWithTokenOccuringMultiple(temp) {
+            it.last().toString() /* selector for suit */
+        })
+
+        if (candidates.isEmpty()) {
+            candidates.addAll(cardsWithTokenOccuringMultiple(temp) {
+                it.substring(0 ..it.length - 2) /* selector for rank */
+            })
+        }
+
+        if (candidates.isEmpty()) {
+            candidates.addAll(temp)
+        }
+    }
+
+
+    if (candidates.isEmpty()) {
+        candidates.addAll(cardsWithTokenOccuringMultiple(computer) {
+            it.last().toString() /* selector for suit */
+        })
+    }
+
+    if (candidates.isEmpty()) {
+        candidates.addAll(cardsWithTokenOccuringMultiple(computer) {
+            it.substring(0 ..it.length - 2) /* selector for rank */
+        })
+    }
+
+    return candidates
+}
+
+
+
+
+
+
+
+
+fun cardsWithTokenOccuringMultiple(cards: Set<String>, tokenSelector: (String) -> String): Set<String> {
+
+    val hist = mutableMapOf<String, Int>()
+    for (card in cards) {
+        val token = tokenSelector(card)
+        if (token !in hist) {
+            hist[token] = 1
+        } else {
+            hist[token] = hist[token]!! + 1
+        }
+    }
+    val tokenOccuringMultiple: Set<String> =
+        hist.filter { it.value > 1 }.map { it.key }.toSet()
+
+    return cards.filter { tokenSelector(it) in tokenOccuringMultiple }.toSet()
+}
+
+
+
+
+
+
+
 
 
 /**
@@ -175,7 +255,8 @@ fun <T, U> cartesianProduct(c1: Collection<T>, c2: Collection<U>): List<Pair<T, 
 
 
 /**
- * tosses a single element, from collection 'from' to collection 'to' and returns that element for noticing
+ * tosses a single element, from collection 'from' to collection 'to' and returns that element for noticing;
+ * idx out of range results in choosing randomly
  */
 fun <T> toss(from: MutableCollection<T>, to: MutableCollection<T>, idx: Int = 0) : T =
     from.elementAtOrElse(idx) { from.random() }.also { from -= it; to += it }
